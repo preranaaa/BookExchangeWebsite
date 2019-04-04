@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Add New Item to data
+	</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+  	<!--CDN BOOTSTRAP-->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	<!--JS,poppe.js and jquery-->
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!--Custom Script-->
+	
+	<script type="text/javascript">
+    var subcategory = {
+    Books: ["Novel","Academic","Fiction"],
+    EnggGraphics: ["Roller Scale","Set Squares","Drafter"],
+    Used :["Notes","Assignmnets","Pratical Notes"]
+    }
+    function makeSubmenu(value) {
+    if(value.length==0) document.getElementById("categorySelect").innerHTML = "<option></option>";
+    else {
+    var citiesOptions = "";
+    for(categoryId in subcategory[value]) {
+    citiesOptions+="<option>"+subcategory[value][categoryId]+"</option>";
+    }
+    document.getElementById("categorySelect").innerHTML = citiesOptions;
+    }
+    }
+    function displaySelected() { var country = document.getElementById("category").value;
+    var city = document.getElementById("categorySelect").value;
+    alert(country+"\n"+city);
+    }
+
+    function resetSelection() {
+    document.getElementById("category").selectedIndex = 0;
+    document.getElementById("categorySelect").selectedIndex = 0;
+    document.getElementById("itemName").value="";
+    document.getElementById("itemName").placeholder = document.getElementById("itemName").placeholder;
+    document.getElementById("itemDescrip").value="";
+    document.getElementById("itemDescrip").placeholder = document.getElementById("itemDescrip").placeholder;
+    }
+    </script>
+    <style>
+    	.custom-file-label{
+    		margin-left: 0.9rem;
+    	}
+    	.BSX{
+    		margin-left: 0.9rem;
+    	}
+    </style>
+</head>
+<body onload="resetSelection()">
+	<!--add item--->
+<div class="container">
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Add Item</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Item Name</label>  
+  <div class="col-md-6">
+  <input id="itemName" name="textinput" type="text" placeholder="Name to be displayed" class="form-control input-md" required="Enter Item Name">
+  <span id="nameSpan" class="text-danger font-weight-bold"></span>
+  <p id="d"></p>
+ 
+  </div>
+</div>
+<!--Item Description-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Item Description</label>  
+  <div class="col-md-6">
+  <input id="itemDescrip" name="textinput" type="text" placeholder="Something about the item" class="form-control input-md">  
+  </div>
+</div>
+<!-- Multi select -->
+<!--
+<select id="category" size="1" onchange="makeSubmenu(this.value)">
+<option value="" disabled selected>Choose Category</option>
+<option>Books</option>
+<option>EnggGraphics</option>
+<option>Used</option>
+</select>
+
+<select id="categorySelect" size="1" >
+<option value="" disabled selected>Choose Subcategory</option>
+<option></option>
+</select>
+-->
+    <div class="form-group">
+      <label class="control-label col-sm-offset-2 col-sm-2" for="category"></label>
+      <div class="col-sm-6 col-md-4">
+        <select class="form-control" id="category" size="1" onchange="makeSubmenu(this.value)">
+          <option value="" selected>Choose Category</option>
+          <option>Books</option>
+          <option>EnggGraphics</option>
+          <option>Used</option>
+        </select> 
+      </div>
+    </div>
+    <div class="form-group">
+       <label class="control-label col-sm-offset-2 col-sm-2" for="sub-category"></label>
+       <div class="col-sm-6 col-md-4">
+        <select class="form-control" id="categorySelect" size="1">
+        	<option value="" disabled selected>Choose Subcategory</option>
+        	<option></option>
+        </select> 
+      </div>
+    </div>
+
+<!--
+<button onclick="displaySelected()">show selected</button>
+-->
+<!-- File Button --> 
+<!--
+<div class="form-group">
+  <label class="col-md-4 control-label" for="filebutton">File Button</label>
+  <div class="col-md-4">
+    <input id="filebutton" name="filebutton" class="input-file" type="file">
+  </div>
+</div>-->
+<div class="form-group">
+<div class="col-lg-4 col-md-4 col-sm-12">
+    <label class="custom-file-label" for="customFile">Choose Image</label>
+        <input type="file" class="custom-file-input" id="customFile" name="customFile"> 
+        <!--
+        <span class="hidden-error" id="file-err">Please choose correct image</span>  
+        -->         
+</div>
+</div>
+
+<!-- Multiple Checkboxes (inline) -->
+
+<div class="BSX">
+     <!--
+      <div class="form-check form-check-inline">
+      	<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+      <label class="form-check-label" for="exampleRadios1">
+        Sell
+      </label>
+      </div>
+    
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Donate
+      </label>
+      </div>
+    
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+      <label class="form-check-label" for="exampleRadios3">
+        Exchange
+      </label>
+      </div>
+  -->
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+	  <label class="btn btn-primary">
+	    <input type="radio" name="options" id="opt1" autocomplete="off" checked>Sell
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="radio" name="options" id="opt2" autocomplete="off"> Exchange	
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="radio" name="options" id="opt3" autocomplete="off"> Donate
+	  </label>
+	</div>
+</div>
+
+
+<!-- Button -->
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary submitbutton" onclick="validation()">Submit</button>
+  </div>
+</div>
+<!--  
+<input type="text" id="form_fname" name="" required="">
+<span class="error_form" id="fname_error_message"></span>
+<label>
+	First name
+</label>
+</fieldset>
+</form>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		$("fname_error_message").hide();
+
+		var error_fname = false;
+
+		$("#form_fname").focusout(function(){
+			chcek_fname();
+		});
+
+		function check_fname(){
+			var pattern = /^[a-zA-Z]*$/;
+			var fname = $("#form_fname").val()
+			if(pattern.test(fname) && fname !== ''){
+				$("#form_fname").css("border-bottom","2px solid #34f458");
+			}else{
+				$("#form_error_messsage").html("Should only contain characters");
+				$("#form_error_messsage").show();
+				$("#form_fname").css("border-bottom","2px solid #f90A0A");
+				error_fname = true;
+			}
+		}
+
+	})
+</script>-->
+<script type="text/javascript">
+
+	function validation(){
+
+		var iName = document.getElementById('itemName');
+
+
+		if(iName == ""){
+			document.getElementById('nameSpan').innerHTML = "Please fill username field";
+			/*document.getElementById("d").innerHTML = iName.validationMessage;*/
+		}
+		/*
+		var inpObj = document.getElementById("id1");
+		 
+		  if (!inpObj.checkValidity()) {
+		    document.getElementById("demo").innerHTML = inpObj.validationMessage;
+		  }*/
+	}
+	
+</script>
+
+</body>
+</html>

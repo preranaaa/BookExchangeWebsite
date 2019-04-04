@@ -1,0 +1,96 @@
+.selctionPane{
+    background-color: #343a40;
+    padding: 4.5% 0px;
+  }
+.card-size{
+  width:320px;
+}
+.card-body-size{
+  height: 19.2rem;
+}
+.bkcolor{
+  background-color: #343a40;
+}
+.card-footer-bottom{
+padding: .75rem 1.25rem;
+background-color: rgba(0,0,0,.03);
+border-top: 1px solid rgba(0,0,0,.125);
+margin-bottom: .85rem;
+}
+.tag{
+  font-size:40px;
+  color:#ffffff;
+}
+.recently-add,.itemSelection{
+  background-color: #336699;
+}
+.recently-add .card-footer-bottom{
+  background-color: rgba(0,0,0,.03);
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+.recently-add .card-size{
+  height:250px;
+  width: 180px;
+    margin: 20px 12px 20px 12px;
+}
+.recently-add .card-body-size{
+  padding-top: 8rem;
+}
+.ft{
+  height: 300px;
+}
+.social{
+  margin-top: 0px;
+  margin-left: 5rem;
+}
+.ml{
+  margin-right: 15px;
+  color: white;
+}
+.abt{
+  margin-left: 30px;
+
+}
+.copyright{
+  font-weight: 300;
+  margin-left: 550px;
+  color: white;
+}
+.abt-head{
+    float:left;
+  align-content: center; 
+  color:white;
+}
+h5#abt-head{
+  margin-top: 50px;
+  color: white;
+}
+p#abt-head{
+
+  color: white;
+}
+h5#abt-head-ft
+{
+  	color: white;
+  margin-top: 25px;
+  position: relative;
+
+}
+p#abt-head-p{
+  color: white;
+  margin-left: 10px;
+}
+.form-ctrl{
+  display: block;
+  width: 70%;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
+    background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .fa-icon{
+      margin-right:1rem;
+    }

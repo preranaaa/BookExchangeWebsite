@@ -1,0 +1,229 @@
+/* Required height of parents of the Full Page Carousel for proper displaying carousel itself */
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+/* Full Page Carousel itself*/
+.carousel {
+  height: 100%; }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .carousel-item,
+    .carousel .carousel-inner .active {
+      height: 100%; }
+
+/* Navbar animation */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.top-nav-collapse {
+  background-color: #1C2331; }
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1C2331; } }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #1C2331; }
+
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #1C2331!important;
+    }
+}
+
+.row{
+margin-right: 0px;
+margin-left: 0px;
+}
+.btn-rounded{
+-webkit-border-radius: 10em;
+border-radius: 10em;  
+}
+.view {
+background: url("img/bg/home.jpg")no-repeat center center;
+background-size: cover;
+}
+
+/*@media (min-width: 768px) {
+.view {
+  overflow: visible;
+  margin-top: -56px;
+}
+}*/
+.navbar {
+z-index: 1;
+background-color: transparent;
+}
+
+.top-nav-collapse{
+background-color: #4285f4;
+}
+
+.img-fluid{
+width: 100%;
+height: 100%;
+}
+
+.pp-title{
+font-weight: 500;
+}
+
+.pp-title:hover{
+text-decoration: underline;
+}
+
+.pp-author{
+font-weight: 500;
+font-size: 13px;
+color: white;
+background: #007bff;
+padding: 5px;
+box-shadow: grey 1px 1px 3px 0px;
+}
+
+.no-of-posts{
+font-weight: 500;
+font-size: 10px;
+float: right;
+}
+
+.date{
+margin-left: 0.7rem;
+font-weight: 500;
+font-size: 10px;
+}
+
+.ft{
+  height: 300px;
+}
+.ft1{
+  margin-top: 0px;
+  margin-left: 90px;
+}
+.ft-img{
+  background-image: url("../index1.jpg");
+  height: 170px;
+  width: 170px;
+  margin-top: 25px;
+  margin-left: 70px;
+}
+.ml{
+  margin-right: 15px;
+  color: white;
+}
+.abt{
+  margin-left: 30px;
+
+}
+.copyright{
+  font-weight: 300;    
+  color: white;
+  text-align: center;
+  margin-top:15px;
+}
+
+h5#abt-head{
+  margin-top: 20px;
+  color: white;
+}
+p#abt-head{
+
+  color: white;
+}
+
+.form-ctrl{
+  text-align: center;
+  margin-top:10px;
+  display: block;
+  width: 75%;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
+    background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+    
+  h5#abt-head-ft
+  { 
+    color: white;
+    margin-top: 25px;
+  }
+  p#abt-head-p{
+    color: white;
+    margin-left: 10px;
+  }
+.fnt-img{
+  color: white !important;
+  font-size: 200% !important;
+   font-weight: 400; 
+   text-align:center;
+   background: rgba(0, 0, 0, 0.3);
+   z-index: 5;
+}
+
+
+  .carousel-title{
+    text-shadow:    /* first set */
+    0 1px 0 rgb(190,190,190),
+    0 2px 0 rgb(185,185,185),
+    0 3px 0 rgb(180,180,180),
+    0 4px 0 rgb(175,175,175),
+    0 5px 0 rgb(170,170,170),
+    0 6px 0 rgb(165,165,165),
+    0 7px 0 rgb(160,160,160),
+    /* second set */
+    0 1px 5px rgba(0,0,0,.05),
+    0 3px 5px rgba(0,0,0,.10),
+    0 5px 10px rgba(0,0,0,.15),
+    0 7px 10px rgba(0,0,0,.20),
+    0 10px 15px rgba(0,0,0,.25);
+  }
+
+  .carousel-title {
+    transition: all 0.3s ease-in-out;
+}
+.carousel-title:hover {
+    text-shadow:
+                    0 1px 0 rgb(190,190,190),
+                    0 2px 0 rgb(185,185,185),
+                    0 3px 0 rgb(180,180,180),
+                    0 4px 0 rgb(175,175,175),
+                    0 5px 0 rgb(170,170,170),
+                    0 6px 0 rgb(165,165,165),
+                    0 7px 0 rgb(160,160,160),
+                    0 8px 0 rgb(155,155,155),
+                    0 9px 0 rgb(150,150,150),
+                    0 1px 5px rgba(0,0,0,.05),
+                    0 5px 5px rgba(0,0,0,.10),
+                    0 10px 10px rgba(0,0,0,.15),
+                    0 15px 10px rgba(0,0,0,.20),
+                    0 20px 15px rgba(0,0,0,.25);
+    
+    transform: translate(-51%,-51%);
+    transition: all 0.3s ease-in-out;
+}
+/*previous button css*/
+/* a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+} */
